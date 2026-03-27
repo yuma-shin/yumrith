@@ -1,0 +1,97 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import webPexerImage from "../assets/images/webpexer.webp";
+import llamindImage from "../assets/images/llamind.webp";
+import chunkSizeImage from "../assets/images/chunk.webp";
+import ollamaImage from "../assets/images/ollama.webp";
+import NotyraImage from "../assets/images/flowmark.png";
+
+const items = [
+	{
+		title: "WebPexer",
+		imgurl: webPexerImage.src,
+		desc: "画像ファイルのwebpとpngの相互変換をするデスクトップアプリケーションです。",
+		siteurl: "https://github.com/yuma-shin/webpexer",
+		tags: ["Convert Image","Electron App"],
+	},
+	{
+		title: "Llamind",
+		imgurl: llamindImage.src,
+		desc: "Chat GPTライクに使えるOllama向けのデスクトップアプリケーションです。",
+		siteurl: "https://github.com/yuma-shintani/llamind",
+		tags: ["Ollama","Electron App"],
+	},
+  {
+    title: "Chunk Size Checker",
+    imgurl: chunkSizeImage.src,
+    desc: "ドキュメントから総トークン数と目安となるChunk Size、Chunk Overlapを算出するデスクトップアプリケーションです。",
+    siteurl: "https://github.com/yuma-shintani/chunksize-checker",
+    tags: ["RAG","Electron App"],
+  },
+  {
+    title: "Ollama Model Library",
+    imgurl: ollamaImage.src,
+    desc: "Ollama Modelsで利用可能なモデルの最新データセットをJSONフォーマットで提供します。",
+    siteurl: "https://github.com/yuma-shintani/ollama-model-library",
+    tags: ["Ollama","JSON"],
+  },
+  {
+    title: "Notyra",
+    imgurl: NotyraImage.src,
+    desc: "デスクトップ用の軽量Markdownノートエディタです。完全ローカル環境で動作します。",
+    siteurl: "https://notyra.y-shin.net/ja",
+    tags: ["Markdown Editor","Electron App"],
+  }
+];
+
+function shuffleArray(array) {
+	const newArray = [...array];
+	for (let i = newArray.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+	}
+	return newArray;
+}
+
+const shuffledItems = shuffleArray(items);
+---
+<MainGridLayout title="Work" description="Work">
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+        <div class="card-base z-10 px-9 py-6 relative w-full">
+          <div class="mb-6">
+            <h1 class="text-4xl font-bold dark:text-white">My Product</h1>
+            <p class="mt-4 text-gray-600 dark:text-gray-400">個人的に開発したアプリケーション・ツールを紹介します。</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            {shuffledItems.map((item) => (
+              <a
+                href={item.siteurl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-col gap-3 p-7 rounded-[var(--radius-large)] bg-[var(--card-bg)] hover:bg-[var(--btn-regular-bg-hover)] transition-colors"
+              >
+                <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-[14px] bg-[var(--card-bg)] border border-[var(--line-divider)] text-[28px]">
+                    <img src={item.imgurl} class="w-10 h-10 object-contain rounded-md" />
+                </div>
+                <div class="text-xl font-bold text-neutral-900 dark:text-neutral-100 whitespace-normal">{item.title}</div>
+                <div class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed flex-1">{item.desc}</div>
+                <div class="flex flex-wrap gap-1.5 mt-1">
+                  {(item.tags && item.tags.length > 0) && item.tags.map((tag) => (
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 border border-[var(--line-divider)] rounded-full px-2.5 py-0.5 bg-[var(--card-bg-secondary)]">
+                        {tag}
+                    </span>
+                  ))}
+                </div>
+                <div class="flex items-center gap-1.5 text-xs text-neutral-400 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+                  </svg>
+                  {new URL(item.siteurl).hostname}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+    </div>
+</MainGridLayout>

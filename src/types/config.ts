@@ -1,3 +1,4 @@
+import type Giscus from 'giscus'
 import type { AUTO_MODE, DARK_MODE, LIGHT_MODE } from "@constants/constants";
 
 export type SiteConfig = {
@@ -6,15 +7,7 @@ export type SiteConfig = {
 
 	lang:
 		| "en"
-		| "zh_CN"
-		| "zh_TW"
 		| "ja"
-		| "ko"
-		| "es"
-		| "th"
-		| "vi"
-		| "tr"
-		| "id";
 
 	themeColor: {
 		hue: number;
@@ -45,9 +38,12 @@ export type Favicon = {
 };
 
 export enum LinkPreset {
-	Home = 0,
-	Archive = 1,
-	About = 2,
+  Home = 0,
+  About = 1,
+  Archive = 2,
+  Work = 3,
+  Awards = 4,
+  Uses = 5,
 }
 
 export type NavBarLink = {
@@ -100,3 +96,24 @@ export type BlogPostData = {
 export type ExpressiveCodeConfig = {
 	theme: string;
 };
+
+export type CommentConfig = {
+  giscus?: GiscusConfig
+}
+
+type GiscusConfig = {
+  repo: Giscus.Repo;
+  host?: string;
+  repoId: string;
+  category: string;
+  categoryId: string;
+  mapping?: Giscus.Mapping;
+  term?: string;
+  strict?: Giscus.BooleanString;
+  reactionsEnabled?: Giscus.BooleanString;
+  emitMetadata?: Giscus.BooleanString;
+  inputPosition?: Giscus.InputPosition;
+  theme?: Giscus.Theme;
+  lang?: Giscus.AvailableLanguage;
+  loading?: Giscus.Loading;
+}
