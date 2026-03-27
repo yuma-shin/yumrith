@@ -27,7 +27,7 @@ import remnarkLinkCard from 'remark-link-card'
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://fuwari.vercel.app/",
+	site: "https://www.y-shin.net/",
 	base: "/",
 	trailingSlash: "always",
 	integrations: [
