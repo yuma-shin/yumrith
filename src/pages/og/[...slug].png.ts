@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 async function fetchNotoSansSCFonts() {
 	try {
 		const cssResp = await fetch(
-			"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap",
+			"https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap",
 		);
 		if (!cssResp.ok) throw new Error("Failed to fetch Google Fonts CSS");
 		const cssText = await cssResp.text();
@@ -126,7 +126,7 @@ export async function GET({
 				flexDirection: "column",
 				backgroundColor: backgroundColor,
 				fontFamily:
-					'"Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+					'"Kosugi Maru", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
 				padding: "60px",
 			},
 			children: [
@@ -297,7 +297,7 @@ export async function GET({
 	const fonts: FontOptions[] = [];
 	if (fontRegular) {
 		fonts.push({
-			name: "Noto Sans SC",
+			name: "Kosugi Maru",
 			data: fontRegular,
 			weight: 400,
 			style: "normal",
@@ -305,7 +305,7 @@ export async function GET({
 	}
 	if (fontBold) {
 		fonts.push({
-			name: "Noto Sans SC",
+			name: "Kosugi Maru",
 			data: fontBold,
 			weight: 700,
 			style: "normal",
