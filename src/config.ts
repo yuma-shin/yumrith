@@ -27,6 +27,7 @@ export const siteConfig: SiteConfig = {
 			url: "https://www.freepik.com/free-ai-image/anime-night-sky-illustration_249236735.htm#fromView=search&page=1&position=37&uuid=b69fab19-0559-4f5f-8b63-f7f55c13693a&query=4k+wallpaper+anime+sky", // (Optional) URL link to the original artwork or artist's page
 		},
 	},
+	generateOgImages: true,
 	toc: {
 		enable: true, // Display the table of contents on the right side of the post
 		depth: 2, // Maximum heading depth to show in the table, from 1 to 3
