@@ -44,6 +44,9 @@ importers:
       '@fontsource/roboto':
         specifier: ^5.2.9
         version: 5.2.10
+      '@fontsource/varela-round':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@giscus/svelte':
         specifier: ^3.1.0
         version: 3.1.0(svelte@5.55.0)
@@ -1264,6 +1267,9 @@ packages:
 
   '@fontsource/roboto@5.2.10':
     resolution: {integrity: sha512-8HlA5FtSfz//oFSr2eL7GFXAiE7eIkcGOtx7tjsLKq+as702x9+GU7K95iDeWFapHC4M2hv9RrpXKRTGGBI8Zg==}
+
+  '@fontsource/varela-round@5.2.8':
+    resolution: {integrity: sha512-9jati7lFSnJlz95e8nxTDFqvKNs3XY9fqYb6f8bUXCLa0iDGp0cvdkwRaTNYjYtrpB+ymrHMeNoVo5oEd/ubcg==}
 
   '@giscus/svelte@3.1.0':
     resolution: {integrity: sha512-87AhkRvT5mUzGFbbv5RX1+DiC8RsRVZPzyGDNyshNUlezlTjnLB7cXf7ySqEKu6KlRTP41c1XGUufoKhoaQjqg==}
@@ -6487,6 +6493,8 @@ snapshots:
   '@fontsource/kosugi-maru@5.2.8': {}
 
   '@fontsource/roboto@5.2.10': {}
+
+  '@fontsource/varela-round@5.2.8': {}
 
   '@giscus/svelte@3.1.0(svelte@5.55.0)':
     dependencies:

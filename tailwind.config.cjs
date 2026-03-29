@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Geist Variable","Kosugi Maru", "sans-serif", ...defaultTheme.fontFamily.sans],
+        sans: ["Varela Round","Kosugi Maru", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
     },
   },
