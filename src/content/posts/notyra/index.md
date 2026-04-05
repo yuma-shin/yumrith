@@ -1,6 +1,6 @@
 ---
 title: Markdownノートエディタ「Notyra」をリリースしました
-published: 2026-02-16
+published: 2026-04-05
 description: "ローカル環境で動作するデスクトップ用の軽量Markdownノートエディタ「Notyra」をリリースしました。"
 image: "./cover.webp"
 tags: [Markdown Editor, Tauri App]
