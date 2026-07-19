@@ -47,8 +47,12 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.About,
 		LinkPreset.Archive,
-		LinkPreset.Work,
 		LinkPreset.Awards,
+		{
+			name: "Work",
+			url: "https://www.snackpan.app/", // Internal links should not include the base path, as it is automatically added
+			external: true, // Show an external link icon and will open in a new tab
+		},
 	],
 };
 
