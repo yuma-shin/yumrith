@@ -1,4 +1,6 @@
-import type Giscus from 'giscus'
+import type {
+  AvailableLanguage, BooleanString, InputPosition, Loading, Mapping, Theme,
+} from '@giscus/svelte';
 import type { AUTO_MODE, DARK_MODE, LIGHT_MODE } from "@constants/constants";
 
 export type SiteConfig = {
@@ -102,18 +104,18 @@ export type CommentConfig = {
 }
 
 type GiscusConfig = {
-  repo: Giscus.Repo;
+  repo: `${string}/${string}`;
   host?: string;
   repoId: string;
   category: string;
   categoryId: string;
-  mapping?: Giscus.Mapping;
+  mapping?: Mapping;
   term?: string;
-  strict?: Giscus.BooleanString;
-  reactionsEnabled?: Giscus.BooleanString;
-  emitMetadata?: Giscus.BooleanString;
-  inputPosition?: Giscus.InputPosition;
-  theme?: Giscus.Theme;
-  lang?: Giscus.AvailableLanguage;
-  loading?: Giscus.Loading;
+  strict?: BooleanString;
+  reactionsEnabled?: BooleanString;
+  emitMetadata?: BooleanString;
+  inputPosition?: InputPosition;
+  theme?: Theme;
+  lang?: AvailableLanguage;
+  loading?: Loading;
 }

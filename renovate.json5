@@ -7,6 +7,11 @@
   groupName: "all dependencies",
   packageRules: [
     {
+      // astro check and @astrojs/ts-plugin still require the TypeScript JS API.
+      matchPackageNames: ["typescript"],
+      allowedVersions: "<7",
+    },
+    {
       matchManagers: ["github-actions"],
       groupName: "github-actions",
       pinDigests: true,

@@ -1,0 +1,20 @@
+@import "tailwindcss" source("../");
+@import "./main.css";
+@import "./markdown.css";
+@import "./scrollbar.css";
+@import "./transition.css";
+@import "./photoswipe.css";
+@import "./expressive-code.css";
+
+@config "../../tailwind.config.cjs";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Keep the border and button defaults used by the original theme. */
+@layer base {
+  *, ::before, ::after {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  button, [role="button"] {
+    cursor: pointer;
+  }
+}

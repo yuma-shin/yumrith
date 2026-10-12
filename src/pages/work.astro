@@ -44,7 +44,7 @@ const items = [
   }
 ];
 
-function shuffleArray(array) {
+function shuffleArray<T>(array: T[]): T[] {
 	const newArray = [...array];
 	for (let i = newArray.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -70,7 +70,7 @@ const shuffledItems = shuffleArray(items);
                 rel="noopener noreferrer"
                 class="flex flex-col gap-3 p-7 rounded-[var(--radius-large)] bg-[var(--card-bg)] hover:bg-[var(--btn-regular-bg-hover)] transition-colors"
               >
-                <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-[14px] bg-[var(--card-bg)] border border-[var(--line-divider)] text-[28px]">
+                <div class="w-14 h-14 shrink-0 flex items-center justify-center rounded-[14px] bg-[var(--card-bg)] border border-[var(--line-divider)] text-[28px]">
                     <img src={item.imgurl} class="w-10 h-10 object-contain rounded-md" />
                 </div>
                 <div class="text-xl font-bold text-neutral-900 dark:text-neutral-100 whitespace-normal">{item.title}</div>

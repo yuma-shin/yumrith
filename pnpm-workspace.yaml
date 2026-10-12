@@ -1,0 +1,3 @@
+# esbuild needs its install script to set up the platform-specific binary.
+allowBuilds:
+  esbuild: true

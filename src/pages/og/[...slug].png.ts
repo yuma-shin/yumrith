@@ -1,11 +1,15 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import fs from "node:fs";
+import { createRequire } from "node:module";
 import type { APIContext, GetStaticPaths } from "astro";
-import satori from "satori";
 import sharp from "sharp";
 
 import { profileConfig, siteConfig } from "../../config";
+
+// Satori 0.35's ESM bundle references __dirname; use its Node CommonJS entry.
+const require = createRequire(import.meta.url);
+const satori: typeof import("satori").default = require("satori").default;
 
 type Weight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
 type FontStyle = "normal" | "italic";
@@ -28,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	const publishedPosts = allPosts.filter((post) => !post.data.draft);
 
 	return publishedPosts.map((post) => ({
-		params: { slug: post.slug },
+		params: { slug: post.id },
 		props: { post },
 	}));
 };
