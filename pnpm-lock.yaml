@@ -224,7 +224,7 @@ importers:
         specifier: ^1.2.96
         version: 1.2.97
       '@iconify-json/simple-icons':
-        specifier: ^1.2.100
+        specifier: ^1.2.101
         version: 1.2.101
       '@iconify/svelte':
         specifier: ^5.2.3
