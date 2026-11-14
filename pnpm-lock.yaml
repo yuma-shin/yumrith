@@ -180,7 +180,7 @@ importers:
         version: 3.7.4
       '@astrojs/svelte':
         specifier: 9.1.2
-        version: 9.1.2(@types/node@25.5.0)(astro@7.4.2(@astrojs/markdown-remark@7.3.4(supports-color@7.2.0))(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(terser@5.46.1)(yaml@2.8.3))(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(svelte@5.57.3(@typescript-eslint/types@8.57.2))(terser@5.46.1)(typescript@6.0.3)(yaml@2.8.3)
+        version: 9.1.2(@types/node@25.5.0)(astro@7.4.11(@astrojs/markdown-remark@7.3.8(supports-color@7.2.0))(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(terser@5.46.1)(yaml@2.8.3))(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(svelte@5.57.3(@typescript-eslint/types@8.57.2))(terser@5.46.1)(typescript@6.0.3)(yaml@2.8.3)
       '@expressive-code/core':
         specifier: ^0.44.3
         version: 0.44.3
@@ -221,8 +221,8 @@ importers:
         specifier: ^1.2.16
         version: 1.2.16
       '@iconify-json/material-symbols':
-        specifier: ^1.2.97
-        version: 1.2.97
+        specifier: ^1.2.98
+        version: 1.2.99
       '@iconify-json/simple-icons':
         specifier: ^1.2.101
         version: 1.2.101
@@ -236,7 +236,7 @@ importers:
         specifier: ^0.5.20
         version: 0.5.20(tailwindcss@4.3.5)
       '@tailwindcss/vite':
-        specifier: ^4.3.4
+        specifier: ^4.3.5
         version: 4.3.5(vite@8.3.8(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(terser@5.46.1)(yaml@2.8.3))
       astro:
         specifier: ^7.4.7
@@ -317,7 +317,7 @@ importers:
         specifier: ^5.57.3
         version: 5.57.3(@typescript-eslint/types@8.57.2)
       tailwindcss:
-        specifier: ^4.3.4
+        specifier: ^4.3.5
         version: 4.3.5
       typescript:
         specifier: ^6.0.3
@@ -1490,8 +1490,8 @@ packages:
   '@iconify-json/line-md@1.2.16':
     resolution: {integrity: sha512-esHPUQUp30NyqJWa7MNu6ExdG8z/aEFC5r56rVyRGhtJ7acOme6YtYPnDOgVu6p+kk24rM8602xkFuBC6g6x+w==}
 
-  '@iconify-json/material-symbols@1.2.97':
-    resolution: {integrity: sha512-MbE4QHrH4Z4eoerBFrzFSPqHw2NwVGwwOwGZdJym5l5N5loqEUThimlQpK9VJA6mvgWvj5jl43b8bZnqzOxNRQ==}
+  '@iconify-json/material-symbols@1.2.99':
+    resolution: {integrity: sha512-c7CBI249CmvZDeT7sml1iwKEjsbiB8NUG2Bg1KPd7jnvLQ/8iQv7TQWnqq9a2357SkPjnyVTxxTgkWO2rlUtCw==}
 
   '@iconify-json/simple-icons@1.2.101':
     resolution: {integrity: sha512-MXJkMZDancJ/9I+Bgdthi9kXvn3AwWStxoTHwEPwAFQ9kMLBASO1BSstg52fNtjXeizm1Wi91R+QnWxNGkWHPQ==}
@@ -6076,7 +6076,7 @@ snapshots:
       sitemap: 9.0.1
       zod: 4.3.6
 
-  '@astrojs/svelte@9.1.2(@types/node@25.5.0)(astro@7.4.2(@astrojs/markdown-remark@7.3.4(supports-color@7.2.0))(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(terser@5.46.1)(yaml@2.8.3))(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(svelte@5.57.3(@typescript-eslint/types@8.57.2))(terser@5.46.1)(typescript@6.0.3)(yaml@2.8.3)':
+  '@astrojs/svelte@9.1.2(@types/node@25.5.0)(astro@7.4.11(@astrojs/markdown-remark@7.3.8(supports-color@7.2.0))(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(terser@5.46.1)(yaml@2.8.3))(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(svelte@5.57.3(@typescript-eslint/types@8.57.2))(terser@5.46.1)(typescript@6.0.3)(yaml@2.8.3)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 7.3.1(svelte@5.57.3(@typescript-eslint/types@8.57.2))(vite@8.3.4(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(terser@5.46.1)(yaml@2.8.3))
       astro: 7.4.11(@astrojs/markdown-remark@7.3.8(supports-color@7.2.0))(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.7.0)(stylus@0.64.0(supports-color@7.2.0))(terser@5.46.1)(yaml@2.8.3)
@@ -7198,7 +7198,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/material-symbols@1.2.97':
+  '@iconify-json/material-symbols@1.2.99':
     dependencies:
       '@iconify/types': 2.0.0
 
